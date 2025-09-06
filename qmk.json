@@ -1,4 +1,30 @@
 {
-    "userspace_version": "1.0",
-    "build_targets": []
+  "userspace_version": "1.0",
+  "build_targets": [
+    [
+      "3w6",
+      "mikaelelkiaer"
+    ],
+    [
+      "bastardkb/charybdis/3x5",
+      "mikaelelkiaer"
+    ],
+    [
+      "cantor",
+      "mikaelelkiaer"
+    ],
+    [
+      "crkbd",
+      "mikaelelkiaer"
+    ],
+    [
+      "draculad",
+      "mikaelelkiaer"
+    ],
+    [
+      "handwired/pteron35trackball",
+      "mikaelelkiaer"
+    ]
+  ]
 }
+
