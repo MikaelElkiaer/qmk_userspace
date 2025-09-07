@@ -108,7 +108,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 
 void keyboard_post_init_user(void) {
   pimoroni_trackball_set_rgbw(128, 0, 128, 0);
-  pimoroni_trackball_set_precision(1);
+  pimoroni_trackball_set_cpi(1000);
 }
 
 report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
