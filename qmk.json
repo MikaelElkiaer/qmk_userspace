@@ -3,7 +3,13 @@
   "build_targets": [
     [
       "keycapsss/3w6_2040",
-      "mikaelelkiaer"
+      "mikaelelkiaer",
+      "uf2_split_left"
+    ],
+    [
+      "keycapsss/3w6_2040",
+      "mikaelelkiaer",
+      "uf2_split_right"
     ]
     // [
     //   "bastardkb/charybdis/3x5/elitec",
