@@ -76,6 +76,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 )
 };
 
+const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =
+  LAYOUT(
+    'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R',
+    'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R',
+    'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R',
+              '*', '*', '*',  '*', '*', '*'
+  );
+
 static bool scrolling_mode = false;
 
 layer_state_t layer_state_set_user(layer_state_t state) {
