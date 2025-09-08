@@ -35,8 +35,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //                                                             └──────┴─────────────┴────┘   └────┴──────────────┴──────────────────┘
 [_NAV] = LAYOUT_split_3x5_3(
   KC_NO   , KC_NO           , KC_NO           , KC_NO   , KC_NO          ,                     KC_PSCR         , KC_NO           , KC_PGUP         , KC_NO         , KC_NO           ,
-  KC_LCTL , LSFT_T(KC_LSCR) , LGUI_T(KC_PGDN) , KC_LALT , RALT_T(KC_END) ,                     RALT_T(KC_HOME) , LALT_T(KC_LEFT) , RGUI_T(KC_DOWN) , RSFT_T(KC_UP) , RCTL_T(KC_RGHT) ,
-  KC_NO   , KC_DEL          , KC_LCAP         , KC_NO   , KC_PAUS        ,                     KC_NO           , KC_LNUM         , KC_APP          , KC_NO         , KC_NO           ,
+  KC_LCTL , LSFT_T(KC_SCRL) , LGUI_T(KC_PGDN) , KC_LALT , RALT_T(KC_END) ,                     RALT_T(KC_HOME) , LALT_T(KC_LEFT) , RGUI_T(KC_DOWN) , RSFT_T(KC_UP) , RCTL_T(KC_RGHT) ,
+  KC_NO   , KC_DEL          , KC_CAPS         , KC_NO   , KC_PAUS        ,                     KC_NO           , KC_NUM          , KC_APP          , KC_NO         , KC_NO           ,
                                                 KC_NO   , KC_NO          , KC_NO ,     KC_NO , KC_NO           , KC_NO
 ),
 
