@@ -97,17 +97,17 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     case _FUN:
       scrolling_mode = true;
       pimoroni_trackball_set_rgbw(0, 128, 0, 0);
-      pimoroni_trackball_set_cpi(2000);
+      pointing_device_set_cpi(2000);
       break;
     case _PNT:
       pimoroni_trackball_set_rgbw(0, 0, 0, 64);
-      pimoroni_trackball_set_cpi(1500);
+      pointing_device_set_cpi(1500);
       break;
     case _TOP:
     default:
       scrolling_mode = false;
       pimoroni_trackball_set_rgbw(128, 0, 128, 0);
-      pimoroni_trackball_set_cpi(250);
+      pointing_device_set_cpi(250);
       break;
   }
 
@@ -116,7 +116,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 
 void keyboard_post_init_user(void) {
   pimoroni_trackball_set_rgbw(128, 0, 128, 0);
-  pimoroni_trackball_set_cpi(250);
+  pointing_device_set_cpi(250);
 }
 
 report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
