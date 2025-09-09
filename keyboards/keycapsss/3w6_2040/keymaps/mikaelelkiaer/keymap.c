@@ -84,8 +84,6 @@ const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =
               '*', '*', '*',  '*', '*', '*'
   );
 
-static bool scrolling_mode = false;
-
 layer_state_t layer_state_set_user(layer_state_t state) {
   switch(get_highest_layer(state)) {
     case _NAV:
@@ -95,19 +93,14 @@ layer_state_t layer_state_set_user(layer_state_t state) {
       pimoroni_trackball_set_rgbw(128, 0, 0, 0);
       break;
     case _FUN:
-      scrolling_mode = true;
       pimoroni_trackball_set_rgbw(0, 128, 0, 0);
-      pimoroni_trackball_set_cpi(250);
       break;
     case _PNT:
       pimoroni_trackball_set_rgbw(0, 0, 0, 64);
-      pimoroni_trackball_set_cpi(16000);
       break;
     case _TOP:
     default:
-      scrolling_mode = false;
       pimoroni_trackball_set_rgbw(128, 0, 128, 0);
-      pimoroni_trackball_set_cpi(64000);
       break;
   }
 
@@ -116,15 +109,4 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 
 void keyboard_post_init_user(void) {
   pimoroni_trackball_set_rgbw(128, 0, 128, 0);
-  pimoroni_trackball_set_cpi(64000);
-}
-
-report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
-    if (scrolling_mode) {
-        mouse_report.h = mouse_report.x;
-        mouse_report.v = mouse_report.y;
-        mouse_report.x = 0;
-        mouse_report.y = 0;
-    }
-    return mouse_report;
 }
