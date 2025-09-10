@@ -100,7 +100,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
       break;
     case _TOP:
     default:
-      pimoroni_trackball_set_rgbw(128, 0, 128, 0);
+      pimoroni_trackball_set_rgbw(0, 0, 0, 0);
       break;
   }
 
@@ -108,5 +108,5 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 }
 
 void keyboard_post_init_user(void) {
-  pimoroni_trackball_set_rgbw(128, 0, 128, 0);
+  pimoroni_trackball_set_rgbw(0, 0, 0, 0);
 }
