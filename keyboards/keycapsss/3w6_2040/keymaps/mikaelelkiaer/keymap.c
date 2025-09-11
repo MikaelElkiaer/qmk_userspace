@@ -76,6 +76,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 )
 };
 
+bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LT(_FUN, KC_ESC):
+        case LT(_SYM, KC_SPC):
+        case LT(_NAV, KC_BSPC):
+            return true;
+        default:
+            return false;
+    }
+}
+
 const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =
   LAYOUT_split_3x5_3(
     'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R',
